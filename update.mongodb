@@ -1,0 +1,14 @@
+const database = 'mekanbul';
+use(database);
+db.venues.updateOne({"name":"Taş Kafe"},
+  {$push: {"comments": 
+    {
+      "_id": ObjectId(),
+      "author": "Doğukan",
+      "rating": 3.5,
+      "text": "Çıtır tavuk güzel ama her zaman kalmamış deniyor.",
+      "date": new Date()
+    }
+  }
+}
+)

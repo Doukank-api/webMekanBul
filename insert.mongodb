@@ -1,0 +1,30 @@
+const database = 'mekanbul';
+use(database);
+db.venues.insertOne(
+{
+  "name": "Taş Kafe",
+  "address": "Süleyman Demirel Üniversitesi",
+  "rating": 4.5,
+  "foodanddrink": [
+    "Çıtır Tavuk",
+    "Çay",
+    "Makarna"
+  ],
+  "coordinates": [
+    37.82956889620259,
+    30.528819462808272
+  ],
+  "hours": [
+    {
+      "days": "Pazartesi-Cuma",
+      "open": "8:30",
+      "close": "18:30",
+      "isClosed": false
+    },
+    {
+      "days": "Cumartesi-Pazar",
+      "isClosed": true
+    }
+  ]
+}
+ );
